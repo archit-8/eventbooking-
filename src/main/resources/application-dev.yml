@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/event_booking_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+logging:
+  level:
+    # Default level
+    root: INFO
+
+    # Your application logs
+    com.example.demo: DEBUG
+
+    # Hibernate (reduce noise)
+    org.hibernate: WARN
+    org.hibernate.SQL: OFF
+    org.hibernate.orm: WARN
+
+    # Spring framework noise
+    org.springframework: INFO
+    org.springframework.orm.jpa: WARN
+    org.springframework.transaction: WARN
+    org.springframework.web: INFO
+
+    # Hikari pool noise
+    com.zaxxer.hikari: WARN
