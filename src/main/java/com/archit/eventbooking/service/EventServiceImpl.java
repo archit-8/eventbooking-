@@ -32,6 +32,8 @@ public class EventServiceImpl  implements   EventService {
 
        response.setId(savedEvent.getId());
        response.setTitle(savedEvent.getTitle());
+
+        return  response;
      }
 
 
